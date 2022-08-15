@@ -49,8 +49,8 @@ if __name__ == "__main__":
     # url containing information being loaded into driver
     URL = 'https://www.gunviolencearchive.org/last-72-hours'
     options = uc.ChromeOptions()
-    #options.headless = True
-    #options.add_argument('--headless')
+    options.headless = True
+    options.add_argument('--headless')
     driver = uc.Chrome(options=options)
     driver.get(URL)
     time.sleep(8)
