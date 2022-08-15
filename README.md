@@ -8,6 +8,8 @@ To collect this data, I utilized Selenium within a Python environment. My script
 
 The states shown in the map below are different shades of red depending on the number of incidents that have happened within that state. The number that is displayed on each state is the raw number of incidents that have occurred, whereas the color and ranking is per capita.
 
+Script used to collect state population can be found here: https://github.com/noahals/state_population
+
 
 <hr size="" width="" color="" >  
 
