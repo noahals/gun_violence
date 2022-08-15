@@ -44,10 +44,14 @@ if __name__ == "__main__":
 
     sql = "INSERT IGNORE INTO incidents (id, date, state, city, deaths, injured) VALUES (%s, %s, %s, %s, %s, %s)"
     val = []
-    driver = uc.Chrome()
 
+    print("----------------EXTRACTING DATA----------------")
     # url containing information being loaded into driver
     URL = 'https://www.gunviolencearchive.org/last-72-hours'
+    options = uc.ChromeOptions()
+    #options.headless = True
+    #options.add_argument('--headless')
+    driver = uc.Chrome(options=options)
     driver.get(URL)
     time.sleep(8)
 
@@ -64,11 +68,10 @@ if __name__ == "__main__":
 
             # Moving the screen down to the next button
             actions.move_to_element(next).perform()
-            time.sleep(2)
+            time.sleep(1)
 
             # Clicking the next button
             next.click()
-            time.sleep(2)
     except:
         pass
     finally:
@@ -77,5 +80,6 @@ if __name__ == "__main__":
         # Executing the data to the SQL server
         mycursor.executemany(sql, val)
         mydb.commit()
+        print("done!")
 
 
