@@ -1,4 +1,4 @@
-# Gun Violenece Archive Database
+# Gun Violence  Archive Database
 
 This is a current ongoing project to collect and display data regarding the gun violence in each of the US states. This is a passion project that was started and is still being maintained during my free time.
 
